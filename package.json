@@ -8,7 +8,7 @@
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ui": "rmdir build /s /q && cd ../Helsinki-fullstackExercise/part2/phonebook && npm run build && xcopy build ..\\..\\..\\Helsinki-fullstackExercise-phonebook\\build /s /e /y /i",
-    "deploy": "git push heroku master",
+    "deploy": "git push heroku master && git push",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
     "logs:prod": "heroku logs --tail"
   },
