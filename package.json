@@ -11,7 +11,8 @@
     "deploy": "git push heroku master && git push",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
     "deploy:git": "git add . && git commit -m uibuild && npm run deploy",
-    "logs:prod": "heroku logs --tail"
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint ."
   },
   "author": "wei zheng",
   "license": "MIT",
@@ -24,6 +25,7 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "eslint": "^7.1.0",
     "nodemon": "^2.0.4"
   }
 }
