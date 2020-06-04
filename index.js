@@ -61,7 +61,7 @@ app.get('/api/persons/:id', (req, res) => {
     })
 })
 
-app.post('/api/persons', (req, res) => {
+app.post('/api/persons', (req, res, next) => {
     const body = req.body
 
     if (!body.name || !body.number) {
@@ -89,7 +89,8 @@ app.put('/api/persons/:id', (req, rsp, next) => {
         number: body.number
     }
 
-    Person.findByIdAndUpdate(req.params.id, person, { new: true })
+    let opts = { new: true, runValidators: true, context: 'query' };
+    Person.findByIdAndUpdate(req.params.id, person, opts)
         .then(result => {
             rsp.json(result)
         })

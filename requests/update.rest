@@ -1,7 +1,7 @@
-PUT http://localhost:3001/api/persons/5ed7174fb232e506081cdc7a
+PUT http://localhost:3001/api/persons/5ed8920b78227106a0a5693d
 Content-Type:application/json
 
 {
-    "name": "konan zheng updated",
-    "number": "233-123"
+    "name": "konan",
+    "number": "1234567899"
 }

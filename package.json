@@ -10,6 +10,7 @@
     "build:ui": "rmdir build /s /q && cd ../Helsinki-fullstackExercise/part2/phonebook && npm run build && xcopy build ..\\..\\..\\Helsinki-fullstackExercise-phonebook\\build /s /e /y /i",
     "deploy": "git push heroku master && git push",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
+    "deploy:git": "git add . && git commit -m uibuild && npm run deploy",
     "logs:prod": "heroku logs --tail"
   },
   "author": "wei zheng",
@@ -19,6 +20,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.16",
+    "mongoose-unique-validator": "^2.0.3",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
